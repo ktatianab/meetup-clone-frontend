@@ -1,0 +1,16 @@
+/* Estilos para inputs */
+input[type="email"],
+input[type="password"] {
+  color: #000000 !important;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: #999999;
+}
+
+/* Asegurar que el texto de contraseña se muestra como puntos */
+input[type="password"] {
+  font-size: 1.2em;
+  letter-spacing: 0.3em;
+}
