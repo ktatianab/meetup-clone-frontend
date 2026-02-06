@@ -1,0 +1,48 @@
+
+
+ 
+
+@if (authService.isAuthenticated()) {
+  <div class="relative inline-block text-left">
+  <button (click)="toggleMenu()" class="flex items-center cursor-pointer group focus:outline-none">
+    <div class="w-10 h-10 rounded-full bg-yellow-200 flex items-center justify-center text-[#5d3a00] font-bold">
+      U
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" 
+         class="h-4 w-4 ml-1 text-gray-500 transition-transform" 
+         [class.rotate-180]="menuAbierto()"
+         fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+     @if (menuAbierto()) {
+    <div class="fixed inset-0 z-10 w-screen h-screen" (click)="cerrarMenu()"></div>
+
+    <div class="absolute right-0 mt-2 w-56 origin-top-right bg-white rounded-xl shadow-lg ring-1 ring-black ring-opacity-5 z-20 overflow-hidden">
+      <div class="py-2">
+        <a routerLink="/events" (click)="cerrarMenu()" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+          <span class="mr-3">📅</span> Your events
+        </a>
+        <a routerLink="/groups" (click)="cerrarMenu()" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+          <span class="mr-3">👥</span> Your groups
+        </a>
+        <a routerLink="/perfil" (click)="cerrarMenu()" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+          <span class="mr-3">👤</span> View profile
+        </a>
+        
+        <hr class="my-1 border-gray-100">
+        
+        <a routerLink="/settings" (click)="cerrarMenu()" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+          <span class="mr-3">⚙️</span> Settings
+        </a>
+
+        <button (click)="logout()" class="w-full flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+          <span class="mr-3">🚪</span> Log out
+        </button>
+      </div>
+    </div>
+  }
+</div>
+
+}

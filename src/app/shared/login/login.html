@@ -172,13 +172,30 @@
                 Crear cuenta
             </button>
         </form>
-        <a routerLink="/register"> 
         <div class="text-center mt-6">
-            <a *ngIf="!isRegistering" href="javascript:void(0)" (click)="goToRegister()" class="text-indigo-600 font-bold text-sm hover:underline block p-2">¿No tienes cuenta? Regístrate</a>
-            <a *ngIf="!isRegistering" href="#" class="text-indigo-600 font-bold text-sm hover:underline block p-2">¿Olvidaste tu contraseña?</a>
-            <a *ngIf="isRegistering" href="javascript:void(0)" (click)="toggleRegister()" class="text-indigo-600 font-bold text-sm hover:underline block p-2">¿YA tienes cuenta? Inicia sesión</a>
-        </div>
-</a>
+    @if (!isRegistering) {
+      <button 
+        type="button"
+        (click)="goToRegister()" 
+        class="text-indigo-600 font-bold text-sm hover:underline block w-full p-2">
+        ¿No tienes cuenta? Regístrate
+      </button>
+
+      <a routerLink="/forgot-password" 
+         class="text-indigo-600 font-bold text-sm hover:underline block p-2">
+         ¿Olvidaste tu contraseña?
+      </a>
+    }
+
+    @if (isRegistering) {
+      <button 
+        type="button"
+        (click)="toggleRegister()" 
+        class="text-indigo-600 font-bold text-sm hover:underline block w-full p-2">
+        ¿Ya tienes cuenta? Inicia sesión
+      </button>
+    }
+</div>
         </div>
     </div>
 </div>

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router'; // RouterLink no es necesario si usas navegación programática
 import { LoginService } from '../services/login.service';
-import { AuthService } from '../../core/auth.service'; // Asegúrate que la ruta sea correcta
+import { AuthService } from '../../core/auth.service'; 
 
 @Component({
   selector: 'app-login',
