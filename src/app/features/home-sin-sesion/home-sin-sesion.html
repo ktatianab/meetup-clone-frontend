@@ -237,7 +237,7 @@
                      [style.transform]="i % 2 === 0 ? 'rotate(2deg)' : 'rotate(-2deg)'">
                 </div>
 
-                <div class="relative h-52 bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between z-10">
+                <div class="relative h-39 bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between z-10">
                     <h3 class="font-bold text-gray-800 text-xl leading-tight">{{cat.nombre}}</h3>
                     <div class="flex justify-between items-end">
                         <span class="text-gray-400 text-2xl">↗</span>
@@ -251,88 +251,91 @@
 
 
 
-<div class="bg-white py-16 px-4 font-sans text-slate-900 overflow-hidden">
+<section class="bg-white py-24 px-6 font-sans overflow-hidden">
   <div class="max-w-6xl mx-auto relative">
     
-    <h2 class="text-center text-3xl md:text-4xl font-bold mb-20">
+    <h2 class="text-center text-3xl md:text-4xl font-bold mb-20 text-gray-900">
       Cómo funciona Meetup
     </h2>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-y-4 relative">
+    <div class="relative min-h-[500px]">
       
-      <svg class="hidden lg:block absolute top-10 left-[35%] w-32 text-slate-300" viewBox="0 0 100 50">
-        <path d="M0,25 Q50,-10 100,25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2" />
-        <path d="M95,20 L100,25 L95,30" fill="currentColor" />
+      <svg class="hidden lg:block absolute top-[-20px] left-[32%] w-64 h-32 text-gray-300 pointer-events-none" viewBox="0 0 250 100">
+        <path d="M0,50 Q40,50 50,30 C60,0 100,0 110,40 C120,80 80,100 70,70 C60,40 100,20 240,40" fill="none" stroke="currentColor" stroke-width="1.5" />
+        <path d="M235,35 L245,40 L235,45" fill="none" stroke="currentColor" stroke-width="1.5" />
       </svg>
 
-      <svg class="hidden lg:block absolute top-40 right-[28%] w-32 text-slate-300 rotate-[70deg]" viewBox="0 0 100 50">
-        <path d="M0,25 Q50,-10 100,25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2" />
-        <path d="M95,20 L100,25 L95,30" fill="currentColor" />
+      <svg class="hidden lg:block absolute top-[120px] right-[10%] w-40 h-64 text-gray-300 pointer-events-none" viewBox="0 0 100 200">
+        <path d="M80,0 Q120,100 10,150" fill="none" stroke="currentColor" stroke-width="1.5" />
+        <path d="M20,142 L5,150 L20,158" fill="none" stroke="currentColor" stroke-width="1.5" />
       </svg>
 
-      <div class="lg:col-span-5">
-        <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-
-          <div class="flex items-start gap-4"> 
-            <img src="assets/features/lupa.png" alt="Lupa" class="w-10">
-
-            <div>
-              <h3 class="text-xl font-bold mb-3 leading-tight">Descubre eventos y grupos</h3>
-              <p class="text-slate-600 mb-4 text-base">
-                Descubre quién está organizando eventos locales para todas las cosas que te encantan
-              </p>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <div class="lg:col-span-5">
+          <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] h-full">
+            <div class="flex items-start gap-6">
+              <img src="assets/features/lupa.png" alt="Lupa" class="w-12 h-12 object-contain">
+              <div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">Descubre eventos y grupos</h3>
+                <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                  Descubre quién organiza eventos locales para todas las cosas que te gustan
+                </p>
+                <a href="#" class="text-[#634fb8] font-bold hover:underline">
+                  Buscar eventos y grupos
+                </a>
+              </div>
             </div>
           </div>
-          
-          <a href="#" class="text-[#634fb8] hover:text-[#634fb8]">
-            Busca eventos y grupos
-          </a>
         </div>
+
+        <div class="hidden lg:block lg:col-span-1"></div>
+
+        <div class="lg:col-span-5 lg:mt-12">
+          <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] h-full">
+            <div class="flex items-start gap-6">
+              <img src="assets/features/gente.png" alt="Gente" class="w-12 h-12 object-contain">
+              <div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">Encuentra a tu gente</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Conéctese a través de intereses compartidos y disfrute de experiencias significativas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 lg:col-start-4 lg:mt-8">
+          <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+            <div class="flex items-start gap-6">
+              <img src="assets/features/estrellas.png" alt="Inicie" class="w-12 h-12 object-contain">
+              <div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">Inicie un grupo para organizar eventos</h3>
+                <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                  Crea tu propio grupo Meetup y atrae a millones de personas de una comunidad
+                </p>
+                <a href="#" class="text-[#634fb8] font-bold hover:underline">
+                  Iniciar un grupo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div class="lg:col-span-5">
-  <div class="lg:col-span-5">
-  <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-    <div class="flex items-start gap-4">
-      <img src="assets/features/gente.png" alt="gente" class="w-10 shrink-0">
-      <div>
-        <h3 class="text-xl font-bold mb-3 leading-tight">Encuentra a tu gente</h3>
-        <p class="text-slate-600 text-base leading-relaxed">
-          Conéctate a través de intereses compartidos y disfruta de experiencias significativas.
-        </p>
+      <div class="mt-20 lg:absolute lg:bottom-0 lg:left-0 flex flex-col items-center lg:items-start gap-1">
+        <svg class="w-6 h-6 text-green-500 fill-none stroke-current" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+        <span class="text-[#76b852] font-bold text-2xl tracking-tight" style="font-family: 'Comic Sans MS', cursive, sans-serif;">
+          Meetup = community
+        </span>
       </div>
+
     </div>
   </div>
-</div>
-
-     <div class="lg:col-span-6 lg:col-start-4 lg:mt-12">
-  <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-    <div class="flex items-start gap-4">
-      <img src="assets/features/estrellas.png" alt="Estrellas" class="w-10 shrink-0"> <div>
-        <h3 class="text-xl font-bold mb-3 leading-tight">Inicia un grupo para organizar eventos</h3>
-        <p class="text-slate-600 mb-4 text-base">
-          Crea tu propio grupo de Meetup y benefíciate de una comunidad con millones de personas
-        </p>
-        <a href="#" class="text-[#634fb8] font-bold hover:underline transition-colors">
-          Empieza un grupo
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-    </div>
-
-    <div class="mt-16 flex items-center gap-2 lg:ml-4">
-      <svg class="w-6 h-6 text-green-500 fill-current" viewBox="0 0 20 20">
-        <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
-      </svg>
-      <span class="text-green-600 font-bold text-lg tracking-tight">Meetup = comunidad</span>
-    </div>
-
-  </div>
-</div>
+</section>
 
 <section class="bg-white py-12 px-6 lg:px-24 font-sans text-gray-900">
   <div class="max-w-7xl mx-auto mb-16">
@@ -346,7 +349,7 @@
     
     <div class="group cursor-pointer flex flex-col">
       <div class="overflow-hidden rounded-2xl mb-6 shadow-sm">
-        <img src="https://images.unsplash.com/photo-1495214713100-e9c649694421?q=80&w=600" 
+        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600" 
              alt="Brunch" 
              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
       </div>
@@ -386,7 +389,7 @@
 
     <div class="group cursor-pointer flex flex-col">
       <div class="overflow-hidden rounded-2xl mb-6 shadow-sm">
-        <img src="https://images.unsplash.com/photo-1517457373958-b7bdd458ad20?q=80&w=600" 
+        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=600" 
              alt="Grupo" 
              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
       </div>

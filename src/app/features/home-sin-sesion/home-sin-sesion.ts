@@ -78,7 +78,7 @@ export class HomeSinSesion implements OnInit {
   // Métodos de navegación y modales
   openRegister() {
     this.showModal.set(false);
-    this.router.navigate(['/register']);
+    this.router.navigate(['/login']);
   }
 
   openLogin() {

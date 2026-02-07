@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { Home } from './features/home/home';
-import { DetalleEvento } from './features/detalle-evento/detalle-evento';
+import { DetalleEventoComponent } from './features/detalle-evento/detalle-evento';
 import { Perfil } from './features/perfil/perfil';
 import { Login } from './shared/login/login';
 import { Register } from './shared/register/register';
@@ -23,6 +23,6 @@ export const routes: Routes = [
     canActivate: [authGuard]
   },
   { path: 'home', component: HomeSinSesion },
-  { path: 'detalle-evento', component: DetalleEvento },
+  { path: 'detalle-evento/:id', component: DetalleEventoComponent },
   { path: 'perfil', component: Perfil, canActivate: [authGuard] },
 ];

@@ -93,6 +93,7 @@ export class Login {
 
   closeModal() {
     this.loginService.closeLogin();
+    this.router.navigate(['/']);
   }
 
   goToRegister() {
@@ -108,4 +109,5 @@ export class Login {
     this.confirmPassword = '';
     this.isRobotChecked = false;
   }
+  
 }
