@@ -4,7 +4,7 @@ Frontend application for a Meetup-style platform built with Angular, PrimeNG, an
 The app provides a responsive, mobile-first user experience with public pages, authentication screens, event detail views, and JWT-protected private routes.
 
 ## 🚀 Tech Stack
-   
+       
 - **Angular 21**
 - **TypeScript**
 - **PrimeNG**
